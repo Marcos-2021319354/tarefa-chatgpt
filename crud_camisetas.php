@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Verifica se o usuário está autenticado
+if (!isset($_SESSION['email'])) {
+    header('Location: index.php');
+    exit();
+}
+
+// Se o usuário estiver autenticado, exibe a página protegida
+$email = $_SESSION['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +19,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<?php require_once "navbar.php" ?>
   <div class="container mt-5">
     <h1 class="text-center">CRUD de Camisetas</h1>
 
