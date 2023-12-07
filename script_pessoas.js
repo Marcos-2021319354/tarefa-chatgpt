@@ -11,8 +11,8 @@ $(document).ready(function() {
         url: 'adicionar_pessoa.php',
         data: { nome: nome, senha: senha, email: email },
         success: function(response) {
-          $('#pessoas-lista').html(response); // Atualiza a lista após adição
-          $('#form')[0].reset(); // Limpa o formulário após adicionar
+          alert(response);
+          carregarPessoas();
         },
         error: function(error) {
           console.error('Erro:', error);

@@ -12,7 +12,8 @@ $(document).ready(function() {
         data: { nome: nome, tamanho: tamanho, cor: cor },
         success: function(response) {
           // Lógica após a adição da camiseta (exibir mensagem ou recarregar lista, etc.)
-          $('#camisetas-lista').html(response); // Exemplo: Atualizar lista após adição
+          alert(response);
+          carregarCamisetas(); // Exemplo: Atualizar lista após adição
         },
         error: function(error) {
           console.error('Erro:', error);

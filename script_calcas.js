@@ -11,7 +11,8 @@ $(document).ready(function() {
         url: 'adicionar_calca.php',
         data: { nome: nome, tamanho: tamanho, cor: cor },
         success: function(response) {
-          $('#calcas-lista').html(response); // Exemplo: Atualizar lista após adição
+          alert(response); // Exemplo: Atualizar lista após adição
+          carregarCalcas();
         },
         error: function(error) {
           console.error('Erro:', error);

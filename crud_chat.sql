@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 07/12/2023 às 23:57
+-- Host: 127.0.0.1
+-- Tempo de geração: 08/12/2023 às 00:33
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -39,7 +39,10 @@ CREATE TABLE `calcas` (
 --
 
 INSERT INTO `calcas` (`id`, `nome`, `tamanho`, `cor`) VALUES
-(1, 'Jaens', 'GG', 'Cinza');
+(1, 'Jaens', 'GG', 'Cinza'),
+(2, 'Jaens?', 'PP', 'Azul'),
+(3, 'Jeans!', 'GG', 'Ciano'),
+(4, 'Short', 'PP', 'Azul');
 
 -- --------------------------------------------------------
 
@@ -59,7 +62,9 @@ CREATE TABLE `camisetas` (
 --
 
 INSERT INTO `camisetas` (`id`, `nome`, `tamanho`, `cor`) VALUES
-(1, 'Regata', 'GG', 'Branco');
+(1, 'Regata', 'GG', 'Branco'),
+(2, 'Manga curta', 'PP', 'Preto'),
+(3, 'Polover', 'G', 'Verde musgo');
 
 -- --------------------------------------------------------
 
@@ -79,7 +84,9 @@ CREATE TABLE `pessoas` (
 --
 
 INSERT INTO `pessoas` (`id`, `nome`, `email`, `senha`) VALUES
-(1, 'USUÁRIO', 'usuario@mail.com', '123');
+(1, 'USUÁRIO', 'usuario@mail.com', '123'),
+(2, 'Marcao', 'marcaoElChapo@mail.com', '123'),
+(3, 'eu', 'eu@mail.com', '123');
 
 --
 -- Índices para tabelas despejadas
@@ -111,19 +118,19 @@ ALTER TABLE `pessoas`
 -- AUTO_INCREMENT de tabela `calcas`
 --
 ALTER TABLE `calcas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `camisetas`
 --
 ALTER TABLE `camisetas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
